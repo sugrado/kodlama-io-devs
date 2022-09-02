@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFFB1EB9-6447-4C20-8400-27D7E2B04508}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1362EA01-9B01-4E17-A8FB-E42730A2AAB1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "corePackages", "corePackages", "{01B7F227-CE8F-41FD-9AF8-6AF5E5259161}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kodlamaIoDevs", "kodlamaIoDevs", "{84E05683-0E4A-4FB1-8FD4-9F0C509BC74C}"
