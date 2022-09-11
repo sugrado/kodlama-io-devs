@@ -1,6 +1,7 @@
 ﻿using Application.Features.UserSocialMedias.Commands.CreateUserSocialMedia;
 using Application.Features.UserSocialMedias.Commands.DeleteUserSocialMedia;
 using Application.Features.UserSocialMedias.Commands.UpdateUserSocialMedia;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -9,7 +10,7 @@ namespace WebAPI.Controllers
     [ApiController]
     public class UserSocialMediasController : BaseController
     {
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> Create([FromBody] CreateUserSocialMediaCommand createUserSocialMediaCommand)
         {
             var result = await Mediator.Send(createUserSocialMediaCommand);

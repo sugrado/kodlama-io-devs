@@ -2,17 +2,19 @@
 using Application.Features.UserSocialMedias.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using Domain.Entities;
 using Domain.Enums;
 using MediatR;
 
 namespace Application.Features.UserSocialMedias.Commands.CreateUserSocialMedia
 {
-    public class CreateUserSocialMediaCommand : IRequest<CreatedUserSocialMediaDto>
+    public class CreateUserSocialMediaCommand : IRequest<CreatedUserSocialMediaDto>, ISecuredRequest
     {
         public int UserId { get; set; }
         public SocialMediaTypes Type { get; set; }
         public string Link { get; set; }
+        public string[] Roles => new string[] { "Admin" };
     }
 
     public class CreateSocialMediaCommandHandler : IRequestHandler<CreateUserSocialMediaCommand, CreatedUserSocialMediaDto>
