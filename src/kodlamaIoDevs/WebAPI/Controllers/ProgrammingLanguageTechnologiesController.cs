@@ -36,8 +36,8 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
         {
-            var getListProgrammingLanguageQuery = new GetListProgrammingLanguageTechnologyQuery { PageRequest = pageRequest };
-            var result = await Mediator.Send(getListProgrammingLanguageQuery);
+            var getListProgrammingLanguageTechnologyQuery = new GetListProgrammingLanguageTechnologyQuery { PageRequest = pageRequest };
+            var result = await Mediator.Send(getListProgrammingLanguageTechnologyQuery);
             return Ok(result);
         }
 
