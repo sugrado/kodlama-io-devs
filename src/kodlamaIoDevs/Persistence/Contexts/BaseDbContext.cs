@@ -17,6 +17,7 @@ namespace Persistence.Contexts
 
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
+        public DbSet<UserSocialMedia> UserSocialMedias { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
