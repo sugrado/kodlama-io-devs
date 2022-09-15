@@ -1,5 +1,4 @@
-﻿using Application.Features.ProgrammingLanguages.Dtos;
-using Application.Features.ProgrammingLanguageTechnologies.Dtos;
+﻿using Application.Features.ProgrammingLanguageTechnologies.Dtos;
 using Application.Features.ProgrammingLanguageTechnologies.Rules;
 using Application.Services.Repositories;
 using AutoMapper;

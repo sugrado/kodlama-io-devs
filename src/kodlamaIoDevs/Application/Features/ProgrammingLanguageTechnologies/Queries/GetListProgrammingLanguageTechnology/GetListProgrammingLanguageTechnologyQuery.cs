@@ -1,18 +1,12 @@
-﻿using Application.Features.ProgrammingLanguages.Models;
-using Application.Features.ProgrammingLanguageTechnologies.Models;
+﻿using Application.Features.ProgrammingLanguageTechnologies.Models;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Requests;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Features.ProgrammingLanguageTechnologies.Queries.GetListProgrammingLanguageTechnology
 {
-    public class GetListProgrammingLanguageTechnologyQuery:IRequest<ProgrammingLanguageTechnologyListModel>
+    public class GetListProgrammingLanguageTechnologyQuery : IRequest<ProgrammingLanguageTechnologyListModel>
     {
         public PageRequest PageRequest { get; set; }
     }
