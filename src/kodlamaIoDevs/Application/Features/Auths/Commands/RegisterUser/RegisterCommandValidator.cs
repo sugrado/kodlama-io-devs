@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Application.Features.Authorizations.Commands.RegisterUser
+namespace Application.Features.Auths.Commands.RegisterUser
 {
-    public class RegisterUserCommandValidator : AbstractValidator<RegisterUserCommand>
+    public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
     {
-        public RegisterUserCommandValidator()
+        public RegisterCommandValidator()
         {
             RuleFor(p => p.UserForRegisterDto)
                 .NotNull();

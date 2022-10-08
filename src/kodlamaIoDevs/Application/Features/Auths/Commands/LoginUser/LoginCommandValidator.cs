@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Application.Features.Authorizations.Commands.LoginUser
+namespace Application.Features.Auths.Commands.LoginUser
 {
-    public class LoginUserCommandValidator : AbstractValidator<LoginUserCommand>
+    public class LoginCommandValidator : AbstractValidator<LoginCommand>
     {
-        public LoginUserCommandValidator()
+        public LoginCommandValidator()
         {
             RuleFor(p => p.UserForLoginDto)
                 .NotNull();

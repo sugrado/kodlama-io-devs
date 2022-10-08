@@ -21,8 +21,9 @@ namespace Application
 
             services.AddScoped<ProgrammingLanguageBusinessRules>();
             services.AddScoped<ProgrammingLanguageTechnologyBusinessRules>();
-            services.AddScoped<AuthorizationBusinessRules>();
+            services.AddScoped<AuthBusinessRules>();
             services.AddScoped<UserSocialMediaBusinessRules>();
+            services.AddScoped<IAuthService, AuthManager>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
