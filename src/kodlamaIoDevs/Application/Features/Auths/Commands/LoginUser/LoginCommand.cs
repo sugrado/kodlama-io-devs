@@ -1,5 +1,4 @@
-﻿using Application.Features.Auths.Rules;
-using Application.Features.Users.Rules;
+﻿using Application.Features.Users.Rules;
 using Application.Services.AuthService;
 using Application.Services.Repositories;
 using Core.CrossCuttingConcerns.Exceptions;
@@ -21,8 +20,8 @@ namespace Application.Features.Auths.Commands.LoginUser
         private readonly IAuthService _authService;
         private readonly UserBusinessRules _userBusinessRules;
 
-        public LoginUserCommandHandler(IUserRepository userRepository, 
-            IAuthService authService, 
+        public LoginUserCommandHandler(IUserRepository userRepository,
+            IAuthService authService,
             UserBusinessRules userBusinessRules)
         {
             _userRepository = userRepository;
