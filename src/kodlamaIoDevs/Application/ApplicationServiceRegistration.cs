@@ -23,6 +23,8 @@ namespace Application
             services.AddScoped<ProgrammingLanguageTechnologyBusinessRules>();
             services.AddScoped<AuthBusinessRules>();
             services.AddScoped<UserSocialMediaBusinessRules>();
+            services.AddScoped<OperationClaimBusinessRules>();
+            services.AddScoped<UserOperationClaimBusinessRules>();
             services.AddScoped<IAuthService, AuthManager>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
