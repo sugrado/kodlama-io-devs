@@ -18,6 +18,8 @@ namespace Persistence
             services.AddScoped<IProgrammingLanguageTechnologyRepository, ProgrammingLanguageTechnologyRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserSocialMediaRepository, UserSocialMediaRepository>();
+            services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
+            services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
 
             return services;
         }

@@ -11,9 +11,10 @@
 		<Folder Include="Features\Auths\Models\" />
 		<Folder Include="Features\Auths\Queries\" />
 		<Folder Include="Features\Auths\Profiles\" />
-		<Folder Include="Features\Authorizations\Profiles\" />
+		<Folder Include="Features\OperationClaims\Constants\" />
 		<Folder Include="Features\ProgrammingLanguages\Constants\" />
 		<Folder Include="Features\ProgrammingLanguageTechnologies\Constants\" />
+		<Folder Include="Features\UserOperationClaims\Constants\" />
 		<Folder Include="Features\UserSocialMedias\Constants\" />
 		<Folder Include="Features\UserSocialMedias\Models\" />
 		<Folder Include="Features\UserSocialMedias\Queries\" />
