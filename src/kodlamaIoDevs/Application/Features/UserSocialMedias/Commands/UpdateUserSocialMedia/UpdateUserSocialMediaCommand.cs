@@ -1,4 +1,5 @@
-﻿using Application.Features.UserSocialMedias.Dtos;
+﻿using Application.Features.Users.Rules;
+using Application.Features.UserSocialMedias.Dtos;
 using Application.Features.UserSocialMedias.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
@@ -18,22 +19,25 @@ namespace Application.Features.UserSocialMedias.Commands.UpdateUserSocialMedia
     public class UpdateUserSocialMediaCommandHandler : IRequestHandler<UpdateUserSocialMediaCommand, UpdatedUserSocialMediaDto>
     {
         private readonly IUserSocialMediaRepository _userSocialMediaRepository;
-        private readonly UserSocialMediaBusinessRules _userSocialMediaBusinessRules;
         private readonly IMapper _mapper;
+        private readonly UserBusinessRules _userBusinessRules;
+        private readonly UserSocialMediaBusinessRules _userSocialMediaBusinessRules;
 
         public UpdateUserSocialMediaCommandHandler(
             IUserSocialMediaRepository userSocialMediaRepository,
-            UserSocialMediaBusinessRules userSocialMediaBusinessRules,
-            IMapper mapper)
+            IMapper mapper,
+            UserBusinessRules userBusinessRules,
+            UserSocialMediaBusinessRules userSocialMediaBusinessRules)
         {
             _userSocialMediaRepository = userSocialMediaRepository;
-            _userSocialMediaBusinessRules = userSocialMediaBusinessRules;
             _mapper = mapper;
+            _userBusinessRules = userBusinessRules;
+            _userSocialMediaBusinessRules = userSocialMediaBusinessRules;
         }
 
         public async Task<UpdatedUserSocialMediaDto> Handle(UpdateUserSocialMediaCommand request, CancellationToken cancellationToken)
         {
-            await _userSocialMediaBusinessRules.UserShouldExisWhenRequested(request.UserId);
+            await _userBusinessRules.UserShouldExistWhenRequested(request.UserId);
 
             var userSocialMedia = await _userSocialMediaRepository.GetAsync(p => p.Id == request.Id);
             _userSocialMediaBusinessRules.UserSocialMediaShouldExistWhenRequested(userSocialMedia);

@@ -1,7 +1,11 @@
-﻿using Application.Features.Authorizations.Rules;
+﻿using Application.Features.Auths.Rules;
+using Application.Features.OperationClaims.Rules;
 using Application.Features.ProgrammingLanguages.Rules;
 using Application.Features.ProgrammingLanguageTechnologies.Rules;
+using Application.Features.UserOperationClaims.Rules;
+using Application.Features.Users.Rules;
 using Application.Features.UserSocialMedias.Rules;
+using Application.Services.AuthService;
 using Core.Application.Pipelines.Authorization;
 using Core.Application.Pipelines.Validation;
 using FluentValidation;
@@ -23,6 +27,8 @@ namespace Application
             services.AddScoped<ProgrammingLanguageTechnologyBusinessRules>();
             services.AddScoped<AuthBusinessRules>();
             services.AddScoped<UserSocialMediaBusinessRules>();
+            services.AddScoped<OperationClaimBusinessRules>();
+            services.AddScoped<UserOperationClaimBusinessRules>();
             services.AddScoped<IAuthService, AuthManager>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());

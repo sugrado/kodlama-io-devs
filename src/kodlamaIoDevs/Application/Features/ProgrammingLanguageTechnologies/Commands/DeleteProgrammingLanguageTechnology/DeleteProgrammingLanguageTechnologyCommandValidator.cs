@@ -1,6 +1,15 @@
-﻿namespace Application.Features.ProgrammingLanguageTechnologies.Commands.DeleteProgrammingLanguageTechnology
+﻿using Application.Features.ProgrammingLanguageTechnologies.Commands.DeleteProgrammingLanguageTechnologyTechnology;
+using FluentValidation;
+
+namespace Application.Features.ProgrammingLanguageTechnologies.Commands.DeleteProgrammingLanguageTechnology
 {
-    internal class DeleteProgrammingLanguageTechnologyCommandValidator
+    public class DeleteProgrammingLanguageTechnologyCommandValidator : AbstractValidator<DeleteProgrammingLanguageTechnologyCommand>
     {
+        public DeleteProgrammingLanguageTechnologyCommandValidator()
+        {
+            RuleFor(p => p.Id)
+                .NotNull()
+                .NotEmpty();
+        }
     }
 }
